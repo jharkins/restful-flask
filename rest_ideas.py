@@ -80,6 +80,10 @@ def api_articles():
 	return "List of " + url_for('api_articles')
 
 # A route with a parameter
+# Various types of converters for a parameter
+#@app.route('/articles/<int:articleid>')
+#@app.route('/articles/<float:articleid>')
+#@app.route('/articles/<path:articleid>')
 @app.route('/articles/<articleid>')
 def api_article(articleid):
 	return 'You are reading article: ' + articleid
